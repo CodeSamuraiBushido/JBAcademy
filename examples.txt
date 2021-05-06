@@ -1,0 +1,148 @@
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+
+If your input is an integer number or a single word, 
+you can read the data using next() method.
+	String name = scanner.next();
+
+	System.out.println("Hello, " + name + "!");
+
+nextLine() method reads and outputs the whole line.
+
+age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
+
+--replace
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String text = scanner.next();
+        String text2 = text.replace("a", "b");
+        // System.out.println(scanner.next().replace("a", "b")); -- could be this
+        
+        System.out.println(text2);
+        
+    }
+}
+
+--compare
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String text = scanner.nextLine();
+        String txt = text.replace(" ", "").trim();
+        String text2 = scanner.nextLine();
+        String txt2 = text2.replace(" ", "").trim();
+        System.out.println(txt.equals(txt2));
+    }
+}
+
+--Write a program that reads the name of a city and checks if the name ends with "burg".
+--Keep in mind, a city can have a short name.
+--The program should output true or false.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println(scanner.nextLine().endsWith("burg"));
+           
+    }
+}
+
+-- count
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int n = scanner.nextInt();
+        int k = 0;
+        for (int i = a; i <= b; i++) {
+            if (i % n == 0) {
+                k = k + 1;
+            }
+        }
+        System.out.print(k);
+    }
+}
+
+--SUM
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int sum = 0;
+        
+        for(int i=a; i<=b; i++){
+            sum+=i;
+        }
+        System.out.println(sum);
+    } 
+    
+}
+
+--grade count
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int gradeNum = scanner.nextInt();
+        //int grade = scanner.nextInt();  -- goes in for loop
+        //A == 5, B == 4, C == 3, D == 2
+        int A=0;
+        int B=0;
+        int C=0;
+        int D=0;
+        
+        for(int i=0; i < gradeNum; i++){
+            int grade = scanner.nextInt();
+            if(grade==2){
+                D++;
+            }else if (grade==3){
+                C++;
+            }else if(grade==4){
+                B++;
+            }else{
+                A++;
+            }
+            
+        }
+        System.out.println(D+ " " + C + " " +B + " " + A);
+        
+    }
+}
+
+--product of ints not including end number
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int start = scanner.nextInt();
+        int end = scanner.nextInt();
+        long result = 1;
+        
+        for(int i=start; i<end; i++){
+            result = result*i;
+            
+        }
+        System.out.println(result);
+    }
+}
